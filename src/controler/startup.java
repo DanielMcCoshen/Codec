@@ -8,6 +8,8 @@ import view.MainWindow;
 public class startup {
 
     public static void main(String args[]){
-        new MainWindow();
+       MainWindow window =  new MainWindow();
+       GUIController controller = new GUIController();
+       window.setController(controller);
     }
 }

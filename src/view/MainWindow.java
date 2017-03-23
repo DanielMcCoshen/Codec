@@ -1,10 +1,13 @@
 package view;
 
+import controler.GUIController;
 import model.CodeType;
 import model.Tabula;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 
 /**
@@ -42,7 +45,13 @@ public class MainWindow extends JFrame {
     private JPanel leftPanel = new JPanel();
     private JPanel anotherCentrePanel = new JPanel();
 
+
+    private GUIController controller;
+
     public MainWindow(){
+
+
+        //GUI SETUP
         key.setLineWrap(true);
         key.setAutoscrolls(true);
         input.setLineWrap(true);
@@ -79,8 +88,33 @@ public class MainWindow extends JFrame {
         add(anotherCentrePanel, BorderLayout.CENTER);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        setSize(850,300);
+        //LISTENER SETUP
+        encode.addActionListener(actionEvent -> controller.encode());
+        decode.addActionListener(actionEvent -> controller.decode());
+        keyFileDesc.addActionListener(actionEvent -> {
+            JFileChooser file = new JFileChooser();
+            file.showOpenDialog(this);
+            keyfile.setText(file.getSelectedFile().getAbsolutePath());
+        });
+        infileDesc.addActionListener(actionEvent -> {
+            JFileChooser file = new JFileChooser();
+            file.showOpenDialog(this);
+            infile.setText(file.getSelectedFile().getAbsolutePath());
+        });
+        outfileDesc.addActionListener(actionEvent -> {
+            JFileChooser file = new JFileChooser();
+            file.showOpenDialog(this);
+            outfile.setText(file.getSelectedFile().getAbsolutePath());
+        });
+
+
+
+        setSize(910,300);
         setVisible(true);
+    }
+
+    public void setController(GUIController controller) {
+        this.controller = controller;
     }
 
 }
