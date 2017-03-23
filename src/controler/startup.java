@@ -3,13 +3,20 @@ package controler;
 import view.MainWindow;
 
 /**
- * Created by daniel on 22/03/17.
+ * @author SigMa (Daniel McCoshen)
+ * a startup class for the program
  */
 public class startup {
 
     public static void main(String args[]){
-       MainWindow window =  new MainWindow();
-       GUIController controller = new GUIController(window);
-       window.setController(controller);
+        if (args.length ==0) {
+            startGUI();
+        }
+    }
+
+    private static void startGUI(){
+        MainWindow window = new MainWindow();
+        GUIController controller = new GUIController(window);
+        window.setController(controller);
     }
 }

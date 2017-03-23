@@ -47,7 +47,7 @@ public class GUIController {
         String done = code.encode(message, key);
         window.setOut(done);
 
-        if (outFile != ""){
+        if (!outFile.equals("")){
             try(  PrintWriter out = new PrintWriter(outFile)  ){
                 out.println(done);
             }
@@ -73,7 +73,7 @@ public class GUIController {
         String done = code.decode(message, key);
         window.setOut(done);
 
-        if (outFile != ""){
+        if (!outFile.equals("")){
             try(  PrintWriter out = new PrintWriter(outFile)  ){
                 out.println(done);
             }
