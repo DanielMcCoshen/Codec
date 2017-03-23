@@ -17,7 +17,7 @@ public class TabulaList {
         if (ourInstance == null){
             ourInstance = new HashMap<>();
             ourInstance.put( "English", new Tabula("English", "abcdefghijklmnopqrstuvwxyz "));
-            ourInstance.put("Ukrainian", new Tabula("Ukrainian", "абвгґдеєжзиіїйклмиопрстуфхцчшщюяь"));
+            ourInstance.put("Ukrainian", new Tabula("Ukrainian", "абвгґдеєжзиіїйклмиопрстуфхцчшщюяь "));
         }
 
         return ourInstance;
