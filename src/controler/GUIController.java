@@ -22,7 +22,9 @@ public class GUIController {
 
     public GUIController(MainWindow window){
         this.window = window;
-        window.addCode(new CodeType("Test Code Type"));
+        for (CodeType c: CodeList.List()) {
+            window.addCode(c);
+        }
 
     }
 
