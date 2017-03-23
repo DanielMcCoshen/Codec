@@ -11,7 +11,8 @@ import java.awt.event.ActionListener;
 
 
 /**
- * Created by daniel on 22/03/17.
+ * the main window for the cypher program.
+ * @author SigMa (Daniel McCoshen)
  */
 public class MainWindow extends JFrame {
 
@@ -48,6 +49,9 @@ public class MainWindow extends JFrame {
 
     private GUIController controller;
 
+    /**
+     * main window setup, use this to create a new GUI
+     */
     public MainWindow(){
 
 
@@ -113,37 +117,90 @@ public class MainWindow extends JFrame {
         setVisible(true);
     }
 
+    /**
+     * Sets the controler for the window
+     * @param controller the new controller ro use
+     */
     public void setController(GUIController controller) {
         this.controller = controller;
     }
 
+    /**
+     * gets the input field from the window
+     * @return the string that is in the input field
+     */
     public String getInput(){
         return input.getText();
     }
+
+    /**
+     * gets the key field from the window
+     * @return the string that is in the input field
+     */
     public String getKey(){
         return key.getText();
     }
+
+    /**
+     * gets the path to the chosen key file
+     * @return the filepath as a string
+     */
     public String getKeyFile(){
         return keyfile.getText();
     }
+
+    /**
+     *gets the path to the input file
+     * @return the filepath as a string
+     */
     public String getInFile(){
         return infile.getText();
     }
+
+    /**
+     * gets the path to the output file
+     * @return the filepath as a string
+     */
     public String getOutFile(){
         return outfile.getText();
     }
+
+    /**
+     * sets the message feild to the decoded message
+     * @param message the decoded message to display
+     */
     public void setOut(String message){
         input.setText(message);
     }
+
+    /**
+     * adds a code to the GUI
+     * @param code the code to add
+     */
     public void addCode(CodeType code){
         codes.addItem(code);
     }
+
+    /**
+     * adds a tabula to the GUI
+     * @param tab the tabula to add
+     */
     public void addTabula(Tabula tab){
         tabulas.addItem(tab);
     }
+
+    /**
+     * gets the chosen code from the GUI
+     * @return the chosen code
+     */
     public CodeType getCode(){
         return (CodeType)codes.getSelectedItem();
     }
+
+    /**
+     * gets the chosen tabula from the GUI
+     * @return the chosen tabula
+     */
     public Tabula getTabula(){
         return (Tabula)tabulas.getSelectedItem();
     }

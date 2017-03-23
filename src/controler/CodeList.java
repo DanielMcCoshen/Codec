@@ -2,24 +2,33 @@ package controler;
 
 import model.CodeType;
 
-import java.util.LinkedList;
+import java.util.HashMap;
+
 
 /**
- * Created by daniel on 22/03/17.
+ * A Singleton-esque class to store the list of codes available in the program
+ * @author SigMa (Daniel McCoshen)
  */
 public class CodeList {
-    private static LinkedList<CodeType> ourInstance;
+    private static HashMap<String, CodeType> ourInstance;
 
-    public static LinkedList<CodeType> List() {
+    /**
+     * gets the static instance of the HashMap storing the available codes
+     * @return the HashMap of codes
+     */
+    public static HashMap<String, CodeType> List() {
         if (ourInstance == null){
-            ourInstance = new LinkedList<>();
-            ourInstance.add(new CodeType("Test Code"));
-            ourInstance.add(new CodeType("Also Test"));
+            ourInstance = new HashMap<>();
+            ourInstance.put( "Test Code", new CodeType("Test Code"));
+            ourInstance.put( "Also Test", new CodeType("Also Test"));
         }
 
         return ourInstance;
     }
 
+    /**
+     * private constructor for singleton reasons
+     */
     private CodeList() {
     }
 }

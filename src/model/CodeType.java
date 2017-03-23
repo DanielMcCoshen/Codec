@@ -1,7 +1,10 @@
 package model;
 
 /**
- * Created by daniel on 22/03/17.
+ * An ancestor class of all code types in the program.
+ * Not to be instantiated exept for testing
+ *
+ * @author SigMa (Daniel McCoshen)
  */
 public class CodeType {
     public Tabula tab;

@@ -1,7 +1,7 @@
 package model;
 
 /**
- * Created by daniel on 22/03/17.
+ * @author Patrick Cunfer
  */
 public class Tabula {
 
