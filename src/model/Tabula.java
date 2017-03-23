@@ -8,10 +8,13 @@ public class Tabula {
     private String table;
     private int length;
 
-    public Tabula(String characters){
+    private String name;
+
+    public Tabula(String name,String characters){
         // sets the table to characters, and length to the length of characters
         table = characters;
         length = characters.length();
+        this.name = name;
     }
 
 
@@ -40,5 +43,9 @@ public class Tabula {
 
             return table.charAt(idx);
         }
+    }
+
+    public String toString(){
+        return name;
     }
 }

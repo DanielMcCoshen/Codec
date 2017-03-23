@@ -2,23 +2,21 @@ package model;
 
 import java.util.HashMap;
 
-
 /**
- * A Singleton-esque class to store the list of codes available in the program
+ * a singleton-esque class for storing tabulas
  * @author SigMa (Daniel McCoshen)
  */
-public class CodeList {
-    private static HashMap<String, CodeType> ourInstance;
+public class TabulaList {
+    private static HashMap<String, Tabula> ourInstance;
 
     /**
      * gets the static instance of the HashMap storing the available codes
      * @return the HashMap of codes
      */
-    public static HashMap<String, CodeType> List() {
+    public static HashMap<String, Tabula> List() {
         if (ourInstance == null){
             ourInstance = new HashMap<>();
-            ourInstance.put( "Test Code", new CodeType("Test Code"));
-            ourInstance.put( "Also Test", new CodeType("Also Test"));
+            ourInstance.put( "English", new Tabula("English", "abcdefghijklmnopqrstuvwxyz"));
         }
 
         return ourInstance;
@@ -27,6 +25,6 @@ public class CodeList {
     /**
      * private constructor for singleton reasons
      */
-    private CodeList() {
+    private TabulaList() {
     }
 }

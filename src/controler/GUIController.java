@@ -3,6 +3,7 @@ package controler;
 import model.CodeList;
 import model.CodeType;
 import model.Tabula;
+import model.TabulaList;
 import view.MainWindow;
 
 import javax.swing.*;
@@ -29,6 +30,9 @@ public class GUIController {
         this.window = window;
         for (CodeType c: CodeList.List().values()) {
             window.addCode(c);
+        }
+        for (Tabula t : TabulaList.List().values()){
+            window.addTabula(t);
         }
 
     }
