@@ -49,7 +49,14 @@ public class GUIController {
         String key = determinekey();
         String outFile = window.getOutFile();
 
-        String done = code.encode(message, key);
+        String done;
+        try {
+            done = code.encode(message, key);
+        }
+        catch (RuntimeException e){
+            JOptionPane.showMessageDialog(window,e.getMessage());
+            return;
+        }
         window.setOut(done);
 
         if (!outFile.equals("")){
@@ -75,7 +82,14 @@ public class GUIController {
         String key = determinekey();
         String outFile = window.getOutFile();
 
-        String done = code.decode(message, key);
+        String done;
+        try {
+            done = code.decode(message, key);
+        }
+        catch (RuntimeException e){
+            JOptionPane.showMessageDialog(window, e.getMessage());
+            return;
+        }
         window.setOut(done);
 
         if (!outFile.equals("")){
