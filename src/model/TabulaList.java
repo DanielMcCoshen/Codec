@@ -18,6 +18,7 @@ public class TabulaList {
             ourInstance = new HashMap<>();
             ourInstance.put( "English", new Tabula("English", "abcdefghijklmnopqrstuvwxyz "));
             ourInstance.put("Ukrainian", new Tabula("Ukrainian", "абвгґдеєжзиіїйклмиопрстуфхцчшщюяь "));
+            ourInstance.put("French", new Tabula("French", "abcdefghijklmnopqrstuvwxyzùûüÿàâæçéèêëïîôœ "));
         }
 
         return ourInstance;
