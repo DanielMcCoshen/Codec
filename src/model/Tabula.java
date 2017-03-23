@@ -51,7 +51,7 @@ public class Tabula {
         if (fkey == -1) {
             throw new RuntimeException("key not in table");
         } else {
-            fkey = -fkey;
+            fkey = length -fkey;
             while (fkey < 0) {
                 fkey += length;
             }

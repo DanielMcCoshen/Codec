@@ -27,14 +27,10 @@ public class Ceaser extends CodeType {
             throw new RuntimeException("Key Length");
         }
 
-        if (key.length() != 1) {
-            throw new RuntimeException("Key Length");
-        }
-
         String decoded = "";
-        tab.exchange(key.charAt(0));
+        char k = tab.exchange(key.charAt(0));
         for (char c : message.toCharArray()) {
-            decoded += tab.get(c, key.charAt(0));
+            decoded += tab.get(c, k);
         }
 
         return decoded;
