@@ -117,4 +117,34 @@ public class MainWindow extends JFrame {
         this.controller = controller;
     }
 
+    public String getInput(){
+        return input.getText();
+    }
+    public String getKey(){
+        return key.getText();
+    }
+    public String getKeyFile(){
+        return keyfile.getText();
+    }
+    public String getInFile(){
+        return infile.getText();
+    }
+    public String getOutFile(){
+        return outfile.getText();
+    }
+    public void setOut(String message){
+        input.setText(message);
+    }
+    public void addCode(CodeType code){
+        codes.addItem(code);
+    }
+    public void addTabula(Tabula tab){
+        tabulas.addItem(tab);
+    }
+    public CodeType getCode(){
+        return (CodeType)codes.getSelectedItem();
+    }
+    public Tabula getTabula(){
+        return (Tabula)tabulas.getSelectedItem();
+    }
 }

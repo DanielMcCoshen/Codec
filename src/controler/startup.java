@@ -9,7 +9,7 @@ public class startup {
 
     public static void main(String args[]){
        MainWindow window =  new MainWindow();
-       GUIController controller = new GUIController();
+       GUIController controller = new GUIController(window);
        window.setController(controller);
     }
 }
