@@ -7,7 +7,7 @@ package model;
  * @author SigMa (Daniel McCoshen)
  */
 public class CodeType {
-    public Tabula tab;
+    protected Tabula tab;
 
     String name;
 

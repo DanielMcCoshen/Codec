@@ -17,6 +17,7 @@ public class CodeList {
     public static HashMap<String, CodeType> List() {
         if (ourInstance == null){
             ourInstance = new HashMap<>();
+            ourInstance.put("Ceasar Shift", new Ceaser());
             ourInstance.put( "Test Code", new CodeType("Test Code"));
             ourInstance.put( "Also Test", new CodeType("Also Test"));
         }

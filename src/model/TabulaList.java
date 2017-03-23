@@ -16,7 +16,7 @@ public class TabulaList {
     public static HashMap<String, Tabula> List() {
         if (ourInstance == null){
             ourInstance = new HashMap<>();
-            ourInstance.put( "English", new Tabula("English", "abcdefghijklmnopqrstuvwxyz"));
+            ourInstance.put( "English", new Tabula("English", "abcdefghijklmnopqrstuvwxyz "));
         }
 
         return ourInstance;

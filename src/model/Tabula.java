@@ -25,10 +25,10 @@ public class Tabula {
 
         // checks to see if cstart and coffset are in table
         if (istart == -1) {
-            throw new RuntimeException("cstart not in table");
+            throw new RuntimeException("message not in table");
         } else if (ioffset == -1) {
 
-            throw new RuntimeException("coffset not in table");
+            throw new RuntimeException("key not in table");
 
         } else {
 
@@ -42,6 +42,21 @@ public class Tabula {
             }
 
             return table.charAt(idx);
+        }
+    }
+
+    public char exchange(char key){
+        int fkey = table.indexOf(key);
+
+        if (fkey == -1) {
+            throw new RuntimeException("key not in table");
+        } else {
+            fkey = -fkey;
+            while (fkey < 0) {
+                fkey += length;
+            }
+
+            return table.charAt(fkey);
         }
     }
 
