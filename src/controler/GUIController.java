@@ -1,5 +1,6 @@
 package controler;
 
+import model.CodeList;
 import model.CodeType;
 import model.Tabula;
 import view.MainWindow;
