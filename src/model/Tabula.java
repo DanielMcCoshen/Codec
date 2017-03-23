@@ -21,7 +21,13 @@ public class Tabula {
         int ioffset = table.indexOf(coffset);
 
         // checks to see if cstart and coffset are in table
-        if ((istart >= 0) && (ioffset >= 0)) {
+        if (istart == -1) {
+            throw new RuntimeException("cstart not in table");
+        } else if (ioffset == -1) {
+
+            throw new RuntimeException("coffset not in table");
+
+        } else {
 
             // initializes idx and simulates an infinite table by wrapping idx
             int idx = istart + ioffset;
@@ -33,9 +39,6 @@ public class Tabula {
             }
 
             return table.charAt(idx);
-        } else{
-            // placeholder: a character that should never be in a message or a table
-            return '\n';
         }
     }
 }
