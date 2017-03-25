@@ -1,13 +1,19 @@
 package model;
 
 /**
- * Created by exalaber on 23/03/17.
+ * @author Patrick Cunfer
  */
 public class Ceaser extends CodeType {
     public Ceaser(){
         super("Ceaser Shift");
     }
 
+    /**
+     * encodes a message in Ceaser Shift
+     * @param message a string containing the message
+     * @param key a key character
+     * @return a string containing the encoded message
+     */
     public String encode(String message, String key){
 
         if (key.length() != 1){
@@ -22,6 +28,12 @@ public class Ceaser extends CodeType {
         return encoded;
     }
 
+    /**
+     * decodes a message in Ceaser Shift
+     * @param message a string containing the encoded message
+     * @param key a key character
+     * @return a string containing the decoded message
+     */
     public String decode(String message, String key){
         if (key.length() != 1) {
             throw new RuntimeException("Key Length");
