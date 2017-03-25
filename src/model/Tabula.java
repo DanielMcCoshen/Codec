@@ -10,6 +10,11 @@ public class Tabula {
 
     private String name;
 
+    /**
+     * establishes tabula
+     * @param name the name of the object
+     * @param characters the characters to be included in the tabula
+     */
     public Tabula(String name,String characters){
         // sets the table to characters, and length to the length of characters
         table = characters;
@@ -17,8 +22,14 @@ public class Tabula {
         this.name = name;
     }
 
-
+    /**
+     * generates a character of cipher text
+     * @param cstart the character of plain text
+     * @param coffset teh key character
+     * @return the character of cipher text
+     */
     public char get(char cstart, char coffset){
+
         // converts chars to ints
         int istart = table.indexOf(cstart);
         int ioffset = table.indexOf(coffset);
@@ -45,16 +56,21 @@ public class Tabula {
         }
     }
 
+    /**
+     * exchanges an encoding key character for a decoding key character
+     * @param key the encoding key character
+     * @return the decoding key character
+     */
     public char exchange(char key){
+        // converts to int
         int fkey = table.indexOf(key);
 
+        // checks if key is in table
         if (fkey == -1) {
             throw new RuntimeException("key not in table");
         } else {
+            // converts forward key to backward key
             fkey = length -fkey;
-            while (fkey < 0) {
-                fkey += length;
-            }
 
             return table.charAt(fkey);
         }
