@@ -18,6 +18,7 @@ public class CodeList {
         if (ourInstance == null){
             ourInstance = new HashMap<>();
             ourInstance.put("Ceasar Shift", new Ceaser());
+            ourInstance.put("Atbash", new Atbash());
             ourInstance.put( "Test Code", new CodeType("Test Code"));
             ourInstance.put( "Also Test", new CodeType("Also Test"));
         }
