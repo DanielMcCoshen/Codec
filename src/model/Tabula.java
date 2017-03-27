@@ -5,7 +5,7 @@ package model;
  */
 public class Tabula {
 
-    private String table;
+    public String table;
     private int length;
 
     private String name;
