@@ -19,8 +19,9 @@ public class CodeList {
             ourInstance = new HashMap<>();
             ourInstance.put("Ceasar Shift", new Ceaser());
             ourInstance.put("Atbash", new Atbash());
-            ourInstance.put( "Test Code", new CodeType("Test Code"));
-            ourInstance.put( "Also Test", new CodeType("Also Test"));
+            ourInstance.put("Vigenere", new Vigenere());
+            //ourInstance.put( "Test Code", new CodeType("Test Code"));
+            //ourInstance.put( "Also Test", new CodeType("Also Test"));
         }
 
         return ourInstance;
