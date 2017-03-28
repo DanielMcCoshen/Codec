@@ -18,7 +18,7 @@ public class Tabula {
     public Tabula(String name,String characters){
         // sets the table to characters, and length to the length of characters
         table = characters;
-        length = characters.length();
+        length = characters.length() -1;
         this.name = name;
     }
 

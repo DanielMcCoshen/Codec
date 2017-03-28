@@ -1,7 +1,7 @@
 package model;
 
 /**
- * Created by daniel on 28/03/17.
+ * @author Daniel McCoshen
  */
 public class Vigenere extends CodeType {
 

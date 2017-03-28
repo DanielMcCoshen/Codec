@@ -20,6 +20,7 @@ public class CodeList {
             ourInstance.put("Ceasar Shift", new Ceaser());
             ourInstance.put("Atbash", new Atbash());
             ourInstance.put("Vigenere", new Vigenere());
+            ourInstance.put("Running Key", new RunningKey());
             //ourInstance.put( "Test Code", new CodeType("Test Code"));
             //ourInstance.put( "Also Test", new CodeType("Also Test"));
         }
